@@ -11,6 +11,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: process.env.GITHUB_PAGES ? `/${process.env.REPO_NAME || 'mts-transportation'}/` : '/',
   server: {
     host: '0.0.0.0',
     port: 5000,
